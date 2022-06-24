@@ -8,6 +8,7 @@ module.exports.findAll = async(req,res)=>{
 }
 
 module.exports.create = async(req,res)=>{
+    console.log("request is ----------------------------------: ", req.body)
     const user = await createNewUser(req.body);
     if(!user) return res.status(400).json({success:false, message:"Failed to create new user", data: null});
     delete user.password;

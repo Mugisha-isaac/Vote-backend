@@ -6,17 +6,17 @@ module.exports.findAllUsers = async()=>{
     return null;
 }
 
-module.exports.createNewUser = async(user)=>{
-   const {nationalId,names,email,password} = user;
+module.exports.createNewUser = async(req)=>{
+   const {nationalId,names,email,password} = req;
    const newUser = new User();
    newUser.nationalId = nationalId;
    newUser.names = names;
    newUser.email = email;
-   newUser.password = password;
+   newUser.password =password;
 
-   await user.save();
+   await newUser.save();
 
-   return user;
+   return newUser;
 }
 
 module.exports.getUserByID = async(id)=>{
