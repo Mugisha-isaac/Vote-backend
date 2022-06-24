@@ -8,11 +8,11 @@ module.exports.findAllUsers = async()=>{
 
 module.exports.createNewUser = async(user)=>{
    const {nationalId,names,email,password} = user;
-   const user = new User();
-   user.nationalId = nationalId;
-   user.names = names;
-   user.email = email;
-   user.password = password;
+   const newUser = new User();
+   newUser.nationalId = nationalId;
+   newUser.names = names;
+   newUser.email = email;
+   newUser.password = password;
 
    await user.save();
 
