@@ -9,7 +9,7 @@ const {AuthRoutes} = require('./Routes/Auth.Routes')
 dotenv.config();
 
 
-const port = process.env.port || 3300;
+const port = process.env.port || 3300;  
 const app = express();
 
 //connecting to the server
