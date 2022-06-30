@@ -36,6 +36,7 @@ module.exports.LoginController = async (req, res) => {
 
       res.cookie("jwt",accessToken,{secure:true,httpOnly:true});
       return res.status(200).json({
+        success:true,
         token:accessToken,
         message:"Login Successfully completed.."
       })
