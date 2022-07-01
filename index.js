@@ -4,7 +4,8 @@ const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose')
 const {userRoutes} = require('./Routes/User.routes');
-const {AuthRoutes} = require('./Routes/Auth.Routes')
+const {AuthRoutes} = require('./Routes/Auth.Routes');
+const {CandidateRoutes} = require('./Routes/Candidate.routes');
 
 dotenv.config();
 
@@ -32,6 +33,7 @@ app.get('/', (req,res)=>{
 
 app.use('/user', userRoutes);
 app.use('/auth',AuthRoutes);
+app.use('/candidate',CandidateRoutes);
 
 app.listen(port,()=>{
     console.log(`server is running on port ${port}`);
