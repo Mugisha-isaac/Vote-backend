@@ -4,7 +4,7 @@ const {create,getAll} = require("../controllers/Candidate.controller");
 const router = express.Router();
 
 router.route('/post').post(create);
-router.route('/candidates').get(getAll);
+router.route('/').get(getAll);
 
 
 exports.CandidateRoutes = router;

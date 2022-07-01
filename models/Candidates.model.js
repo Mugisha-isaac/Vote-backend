@@ -10,6 +10,11 @@ const candidatesSchema = new Schema({
         type:Number,
         required: true,
         default:0
+    },
+    imgUrl:{
+        type:String,
+        required: false,
+        default:'https://www.ktpress.rw/wp-content/uploads/2020/09/50312364806_48ae45bf32_c.jpg'
     }
 });
 
