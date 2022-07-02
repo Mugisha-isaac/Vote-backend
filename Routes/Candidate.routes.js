@@ -6,5 +6,4 @@ const router = express.Router();
 router.route('/post').post(create);
 router.route('/').get(getAll);
 
-
 exports.CandidateRoutes = router;

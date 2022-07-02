@@ -1,12 +1,8 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const userSchema = new Schema({
-    nationalId:{
-       type: Number,
-       required: true,
-    },
-    names:{
+const reactNativeSchema = new Schema({
+    name:{
         type:String,
         required: true,
     },
@@ -15,16 +11,10 @@ const userSchema = new Schema({
         unique:true,
         required: true
     },
-
     password:{
         type:String,
         required: true,
-    },
-    voted:{
-        type:Boolean,
-        required:true,
-        default:false
     }
 });
 
-module.exports = mongoose.model("User", userSchema);
+module.exports = mongoose.model("ReactNative", reactNativeSchema);

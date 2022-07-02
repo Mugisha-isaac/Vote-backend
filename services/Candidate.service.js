@@ -13,3 +13,8 @@ module.exports.getAllCandidates = async()=>{
     if(candidates) return candidates;
     return null;
 }
+
+
+// module.exports.voteCandidate = async(userId,candidateId)=>{
+      
+// }
