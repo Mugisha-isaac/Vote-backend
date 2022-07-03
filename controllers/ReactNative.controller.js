@@ -38,7 +38,9 @@ module.exports.SignupController = async (req, res) => {
         return res.status(200).json({
           success:true,
           token:accessToken,
-          message:"Login Successfully completed.."
+          message:"Login Successfully completed..",
+          expiresIn:process.env.EXPIRESIN,
+          user:user
         })
     
   };
