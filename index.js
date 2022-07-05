@@ -8,7 +8,7 @@ const swaggerJsDoc = require('swagger-jsdoc');
 const {userRoutes} = require('./Routes/User.routes');
 const {AuthRoutes} = require('./Routes/Auth.routes');
 const {CandidateRoutes} = require('./Routes/Candidate.routes');
-const {ReactNativeUserRoutes} = require('./Routes/ReactNative.routes');
+const {ReactNativeUserRoutes} = require('./Routes/ReactNative.routes'); 
 
 dotenv.config();
 

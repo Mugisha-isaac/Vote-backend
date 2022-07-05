@@ -1,5 +1,6 @@
 const express = require('express');
-const {findAll,getById} = require('../controllers/User.controller');
+const {findAll,getById,voteController} = require('../controllers/User.controller');
+const {authorizeVoting,protectRoute} = require('../middlewares/Auth.middleware')
 
 
 const router = express.Router();
@@ -77,7 +78,8 @@ const router = express.Router();
  * /user/{id}:
  *   get:
  *     summary: get a user by id
- *     tags: [User]
+ *     tags:
+ *      - User
  *     parameters:
  *       - in: path
  *         name: id
@@ -98,6 +100,7 @@ const router = express.Router();
 
 router.route('/').get(findAll);
 router.route('/:id').get(getById);
+router.route('/vote/:id').post(protectRoute,authorizeVoting('user'),voteController);
 
 
 module.exports.userRoutes = router;

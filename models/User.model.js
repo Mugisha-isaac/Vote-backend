@@ -24,6 +24,15 @@ const userSchema = new Schema({
         type:Boolean,
         required:true,
         default:false
+    },
+    userType:{
+        type:String,
+        required:false,
+        default:'user'
+    },
+    candidateVoted:{
+        type: mongoose.Schema.Types.ObjectId,
+        required: false
     }
 });
 
